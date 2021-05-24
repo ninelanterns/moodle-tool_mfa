@@ -91,6 +91,10 @@ function tool_mfa_after_config() {
     }
 }
 
+function tool_mfa_before_http_headers() {
+    tool_mfa_after_config();
+}
+
 function tool_mfa_bulk_user_actions() {
     return [
         'tool_mfa_reset_factors' => new action_link(
